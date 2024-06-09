@@ -20,3 +20,5 @@ export default function Home() {
     </main>
   );
 }
+
+//TODO: Add travelling, who I am. Link socials and update info
