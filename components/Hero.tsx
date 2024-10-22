@@ -35,11 +35,11 @@ const hero = () => {
           </p>
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Dynamic Web Magic with Next.js"
+            words="A lead QA to a front-end developer"
           />
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            An SDET in the React space
-          </p>
+          {/* <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            React TS/JS
+          </p> */}
           <a href="#about">
             <Button
               title="About me"
