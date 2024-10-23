@@ -72,32 +72,16 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Big 2 card game",
-    desc: "A 4 player game",
+    title: "Big 2",
+    desc: "A 4 player card game",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
-    projectUrl: "https://www.google.com"
+    projectUrl: "https://big2-backend-32e198d5c791.herokuapp.com/"
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2",
-    thumbnail: "/exp2.svg",
-    projectUrl: "https://www.google.com"
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2",
-    thumbnail: "/exp3.svg",
-    projectUrl: "https://www.google.com"
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Booking application",
+    desc: "Allowing SMEs to create a website and digitalise appointments",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
     projectUrl: "https://www.google.com"
