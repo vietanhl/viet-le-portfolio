@@ -40,7 +40,7 @@ export function Button({
         borderRadius: borderRadius,
       }}
       {...otherProps}
-      onClick={otherProps.projectUrl !== undefined ? () => window.open(otherProps.projectUrl)?.focus() : console.log('')}
+      onClick={otherProps.projecturl !== undefined ? () => window.open(otherProps.projecturl)?.focus() : console.log('')}
     >
       <div
         className="absolute inset-0 rounde-[1.75rem]"
