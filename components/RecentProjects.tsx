@@ -1,80 +1,48 @@
-"use client";
-
-import { FaLocationArrow } from "react-icons/fa6";
+import React from "react";
 
 import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
+import { Button } from "./ui/MovingBorders";
 
-const RecentProjects = () => {
+const recentProjects = () => {
   return (
     <section id="projects">
-      <div className="py-20">
+      <div className="py-20 w-full">
         <h1 className="heading">
-          A small selection of{" "}
-          <span className="text-purple">recent projects</span>
+          My <span className="text-purple"> Projects </span>
         </h1>
-        <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-          {projects.map((item) => (
-            <div
-              className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-              key={item.id}
+
+        <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+          {projects.map((card) => (
+            <Button
+              key={card.id}
+              duration={Math.floor(Math.random() * 10000) + 10000}
+              borderRadius="1.75rem"
+              style={{
+                background: "rgb(4,7,29)",
+                backgroundColor:
+                  "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+
+                borderRadius: `calc(1.75rem* 0.96)`,
+              }}
+              className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+              projectUrl={card.projectUrl}
             >
-              <PinContainer
-                title="/ui.aceternity.com"
-                href="https://twitter.com/mannupaaji"
-              >
-                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                  <div
-                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                    style={{ backgroundColor: "#13162D" }}
-                  >
-                    <img src="/bg.png" alt="bgimg" />
-                  </div>
-                  <img
-                    src={item.img}
-                    alt="cover"
-                    className="z-10 absolute bottom-0"
-                  />
+              <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
+                <img
+                  src={card.thumbnail}
+                  alt={card.thumbnail}
+                  className="lg:w-32 md:w-20 w-16"
+                />
+                <div className="lg:ms-5">
+                  <h1 className="text-start text-xl md:text-2xl font-bold">
+                    {card.title}
+                  </h1>
+                  <p className="text-start text-white-100 mt-3 font-semibold">
+                    {card.desc}
+                  </p>
                 </div>
-
-                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                  {item.title}
-                </h1>
-
-                <p
-                  className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                  style={{
-                    color: "#BEC1DD",
-                    margin: "1vh 0",
-                  }}
-                >
-                  {item.des}
-                </p>
-
-                <div className="flex items-center justify-between mt-7 mb-3">
-                  <div className="flex items-center">
-                    {item.iconLists.map((icon, index) => (
-                      <div
-                        key={index}
-                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                        style={{
-                          transform: `translateX(-${5 * index + 2}px)`,
-                        }}
-                      >
-                        <img src={icon} alt="icon5" className="p-2" />
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex justify-center items-center">
-                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                      Check Live Site
-                    </p>
-                    <FaLocationArrow className="ms-3" color="#CBACF9" />
-                  </div>
-                </div>
-              </PinContainer>
-            </div>
+              </div>
+            </Button>
           ))}
         </div>
       </div>
@@ -82,4 +50,4 @@ const RecentProjects = () => {
   );
 };
 
-export default RecentProjects;
+export default recentProjects;

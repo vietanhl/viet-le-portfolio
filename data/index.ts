@@ -72,35 +72,19 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Big Two - 4 player card game",
-    des: "First project learning to code in TS",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://big2-backend-32e198d5c791.herokuapp.com/",
+    title: "Big 2",
+    desc: "A 4 player card game",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+    projectUrl: "https://big2-backend-32e198d5c791.herokuapp.com/"
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
-  },
-  {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    title: "Booking application",
+    desc: "Allowing SMEs to create a website and digitalise appointments",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+    projectUrl: "https://www.google.com"
   },
 ];
 
