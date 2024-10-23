@@ -38,9 +38,9 @@ export function Button({
       )}
       style={{
         borderRadius: borderRadius,
-      }}    
+      }}
       {...otherProps}
-      onClick={() =>  window.open(otherProps.projectUrl)?.focus()}
+      onClick={otherProps.projectUrl !== undefined ? () => window.open(otherProps.projectUrl)?.focus() : console.log('')}
     >
       <div
         className="absolute inset-0 rounde-[1.75rem]"
