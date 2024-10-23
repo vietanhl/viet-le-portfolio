@@ -27,7 +27,8 @@ export function Button({
   borderClassName?: string;
   duration?: number;
   className?: string;
-  [key: string]: any;
+    [key: string]: any;
+
 }) {
   return (
     <Component
@@ -37,8 +38,9 @@ export function Button({
       )}
       style={{
         borderRadius: borderRadius,
-      }}
+      }}    
       {...otherProps}
+      onClick={() =>  window.open(otherProps.projectUrl)?.focus()}
     >
       <div
         className="absolute inset-0 rounde-[1.75rem]"
@@ -112,6 +114,7 @@ export const MovingBorder = ({
         className="absolute h-full w-full"
         width="100%"
         height="100%"
+   
         {...otherProps}
       >
         <rect
